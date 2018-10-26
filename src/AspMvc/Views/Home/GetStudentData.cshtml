@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AspMvc.Models.Student_Info>
+@{
+    ViewData["Title"] = "GetStudentData";
+}
+
+<h2>StudentData</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th> Student_ID </th>
+        <th> Name </th>
+        <th>Branch</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+    <tr>
+        <td>@d.Student_ID</td>
+        <td>@d.Name</td>
+        <td>@d.Branch</td>
+    </tr>
+    }
+</table>
